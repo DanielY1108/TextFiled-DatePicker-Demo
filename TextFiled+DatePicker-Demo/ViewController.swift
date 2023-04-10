@@ -32,6 +32,8 @@ class ViewController: UIViewController {
         datePicker.datePickerMode = .date
         // datePicker 스타일을 설정합니다. wheels, inline, compact, automatic이 존재합니다.
         datePicker.preferredDatePickerStyle = .wheels
+        // 원하는 언어로 지역 설정도 가능합니다.
+        datePicker.locale = Locale(identifier: "ko-KR")
         // 값이 변할 때마다 동작을 설정해 줌
         datePicker.addTarget(self, action: #selector(dateChange), for: .valueChanged)
         // textField의 inputView가 nil이라면 기본 할당은 키보드입니다.
